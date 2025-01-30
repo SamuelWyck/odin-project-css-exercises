@@ -5,6 +5,10 @@
 
 .container {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: min-content min-content 1fr min-content;
+  gap: 4px;
 }
 
 .container div {
@@ -16,6 +20,7 @@
 }
 
 .header {
+  grid-column: 1 / -1;
   background-color: #393f4d;
   display: grid;
   grid-template-columns: minmax(max-content, 2fr) 3fr;
@@ -41,6 +46,8 @@ li {
 }
 
 .sidebar {
+  grid-column: 1 / 2;
+  grid-row: 2 / -2;
   background-color: #C50208;
 }
 
