@@ -27,6 +27,16 @@ ul.dropdown-menu li:hover {
 
 .visible {
   display: block;
+  transform-origin: top;
+  animation-name: drop-down;
+  animation-timing-function: ease-in-out;
+  animation-delay: .2s;
+  animation-duration: .7s;
+  animation-fill-mode: backwards;
 }
 
-
+@keyframes drop-down {
+  0% {transform: scaleY(0);}
+  70% {transform: scaleY(1.1);}
+  100% {transform: scaleY(1);}
+}
